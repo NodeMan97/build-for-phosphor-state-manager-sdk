@@ -16,8 +16,8 @@ build of application. Due to another dependency "sdeventplus" not being
 able to locate the "function2/function2.hpp" header. The solution for this
 was to add a wrap for the "function2" dependency in the subprojects folder
 of phosphor-state-manager.
-Once these steps were completed the SDK's hello-world example along with it's
-precursor step, cross compiling phosphor-state-manager for the SDK, completed as
+Once these steps are completed the SDK's hello-world example along with it's
+precursor step, cross compiling phosphor-state-manager for the SDK, worked as
 expected.
 
 # Step one: Add Boost files
