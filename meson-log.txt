@@ -1,0 +1,556 @@
+Build started at 2022-08-03T18:33:35.716018
+Main binary: /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/python3
+Build Options: '--cross-file /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/share/meson/arm-openbmc-linux-gnueabi-meson.cross' '--native-file /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/share/meson/meson.native'
+Python system: Linux
+The Meson build system
+Version: 0.62.2
+Source dir: /home/hardcore/pdk/phosphor-state-manager
+Build dir: /home/hardcore/pdk/phosphor-state-manager/build
+Build type: cross build
+Project name: phosphor-state-manager
+Project version: 0.1
+Sanity testing C++ compiler: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Is cross compiler: True.
+Sanity check compiler command line: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi sanitycheckcpp.cc -o sanitycheckcpp_cross.exe -D_FILE_OFFSET_BITS=64 -c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+C++ compiler for the host machine: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi (gcc 12.1.0 "arm-openbmc-linux-gnueabi-g++ (GCC) 12.1.0")
+C++ linker for the host machine: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi ld.bfd 2.38.20220623
+Sanity testing C++ compiler: g++
+Is cross compiler: False.
+Sanity check compiler command line: g++ sanitycheckcpp.cc -o sanitycheckcpp.exe -isystem/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/include -O2 -pipe -D_FILE_OFFSET_BITS=64 -L/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib -L/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/lib -Wl,-rpath-link,/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib -Wl,-rpath-link,/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/lib -Wl,--allow-shlib-undefined -Wl,--dynamic-linker=/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/lib/ld-linux-x86-64.so.2
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/hardcore/pdk/phosphor-state-manager/build/meson-private/sanitycheckcpp.exe
+C++ compiler for the build machine: g++ (gcc 11.1.0 "g++ (Ubuntu 11.1.0-1ubuntu1~20.04) 11.1.0")
+C++ linker for the build machine: g++ ld.bfd 2.34
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Configuring config.h using configuration
+Pkg-config binary for 1 is not cached.
+Pkg-config binary for 1 specified from cross file, native file, or env var as ['pkg-config']
+Found pkg-config: /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config (0.29.2)
+Determining dependency 'sdbusplus' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion sdbusplus` -> 0
+1.0.0
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --cflags sdbusplus` -> 0
+-DBOOST_ASIO_DISABLE_THREADS -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_COROUTINES_NO_DEPRECATION_WARNING
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs sdbusplus` -> 0
+-L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/lib -lsdbusplus -lsystemd
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs sdbusplus` -> 0
+-lsdbusplus -lsystemd
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp7g0s0rvc
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp7g0s0rvc/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp7g0s0rvc/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            void * something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp7g0s0rvc/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl4mychyz
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl4mychyz/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl4mychyz/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl4mychyz/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp77jqvgks
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp77jqvgks/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp77jqvgks/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp77jqvgks/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpzj64_o0n
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpzj64_o0n/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpzj64_o0n/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpzj64_o0n/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpyktoc2bd
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpyktoc2bd/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpyktoc2bd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpyktoc2bd/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+/home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3/testfile.cpp: In function 'int main()':
+/home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3/testfile.cpp:3:64: error: narrowing conversion of '-1' from 'int' to 'unsigned int' [-Wnarrowing]
+    3 |         int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+      |                                                                ^
+/home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpnja55yf3/testfile.cpp:3:40: error: size '-1' of array 'a' is negative
+    3 |         int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+      |                                       ~^~~~~~~~~~~~~~~~~~~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp40qrjr0h
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp40qrjr0h/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp40qrjr0h/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 5)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp40qrjr0h/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmptoumx8w7
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmptoumx8w7/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmptoumx8w7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 4)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ In file included from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/bits/libc-header-start.h:33,
+                 from /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/stdio.h:27,
+                 from /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmptoumx8w7/testfile.cpp:1:
+/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl1iw4279
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl1iw4279/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpl1iw4279/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/
+programs: =/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/libexec/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/libexec/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/libexec/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/../../../../../arm-openbmc-linux-gnueabi/bin/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/../../../../../arm-openbmc-linux-gnueabi/bin/
+libraries: =/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/../../../../../arm-openbmc-linux-gnueabi/lib/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/arm-openbmc-linux-gnueabi/gcc/arm-openbmc-linux-gnueabi/12.1.0/../../../../../arm-openbmc-linux-gnueabi/lib/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/lib/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/lib/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/arm-openbmc-linux-gnueabi/12.1.0/:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency sdbusplus found: YES 1.0.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'sdeventplus' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion sdeventplus` -> 0
+0.1
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --cflags sdeventplus` -> 0
+
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs sdeventplus` -> 0
+-L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/lib -L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -lsdeventplus -lsystemd -lstdplus -lfmt
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs sdeventplus` -> 0
+-lsdeventplus -lsystemd -lstdplus -lfmt
+Run-time dependency sdeventplus found: YES 0.1
+Pkg-config binary for 1 is cached.
+Determining dependency 'phosphor-logging' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion phosphor-logging` -> 0
+1.0.0
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --cflags phosphor-logging` -> 0
+-DBOOST_ASIO_DISABLE_THREADS -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_COROUTINES_NO_DEPRECATION_WARNING
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs phosphor-logging` -> 0
+-L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/lib -lphosphor_logging -lphosphor_dbus -lsdbusplus -lsystemd
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs phosphor-logging` -> 0
+-lphosphor_logging -lphosphor_dbus -lsdbusplus -lsystemd
+Run-time dependency phosphor-logging found: YES 1.0.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'phosphor-dbus-interfaces' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion phosphor-dbus-interfaces` -> 0
+1.0.0
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --cflags phosphor-dbus-interfaces` -> 0
+-DBOOST_ASIO_DISABLE_THREADS -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_COROUTINES_NO_DEPRECATION_WARNING
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs phosphor-dbus-interfaces` -> 0
+-L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -lphosphor_dbus
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs phosphor-dbus-interfaces` -> 0
+-lphosphor_dbus
+Run-time dependency phosphor-dbus-interfaces found: YES 1.0.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'libgpiod' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion libgpiod` -> 0
+1.6.3
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --cflags libgpiod` -> 0
+
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs libgpiod` -> 0
+-L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -lgpiod
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs libgpiod` -> 0
+-lgpiod
+Run-time dependency libgpiod found: YES 1.6.3
+Pkg-config binary for 1 is cached.
+Determining dependency 'fmt' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion fmt` -> 0
+8.1.1
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --cflags fmt` -> 0
+
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs fmt` -> 0
+-L/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib -lfmt
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --libs fmt` -> 0
+-lfmt
+Run-time dependency fmt found: YES 8.1.1
+Running compile:
+Working directory:  /tmp/tmp3lcaozfd
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /tmp/tmp3lcaozfd/testfile.cpp -o /tmp/tmp3lcaozfd/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++20 
+
+Code:
+ int i = static_cast<int>(0);
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler accepts -std=c++20: YES
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpn_nms7kb
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpn_nms7kb/testfile.cpp -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -fpermissive -std=c++20 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("nlohmann/json.hpp")
+          #error "Header 'nlohmann/json.hpp' could not be found"
+         #endif
+        #else
+         #include <nlohmann/json.hpp>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpn_nms7kb/testfile.cpp:4:12: error: #error "Header 'nlohmann/json.hpp' could not be found"
+    4 |           #error "Header 'nlohmann/json.hpp' could not be found"
+      |            ^~~~~
+
+Has header "nlohmann/json.hpp" : NO 
+
+Executing subproject nlohmann-json 
+
+Project name: nlohmann_json
+Project version: 3.11.1
+C++ compiler for the host machine: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi (gcc 12.1.0 "arm-openbmc-linux-gnueabi-g++ (GCC) 12.1.0")
+C++ linker for the host machine: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi ld.bfd 2.38.20220623
+C++ compiler for the build machine: g++ (gcc 11.1.0 "g++ (Ubuntu 11.1.0-1ubuntu1~20.04) 11.1.0")
+C++ linker for the build machine: g++ ld.bfd 2.34
+Build targets in project: 0
+Subproject nlohmann-json finished.
+
+meson.build:95: WARNING: include_directories sandbox violation!
+meson.build:95: WARNING: include_directories sandbox violation!
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp0gxpscn5
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp0gxpscn5/testfile.cpp -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -fpermissive -std=c++20 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("CLI/CLI.hpp")
+          #error "Header 'CLI/CLI.hpp' could not be found"
+         #endif
+        #else
+         #include <CLI/CLI.hpp>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmp0gxpscn5/testfile.cpp:4:12: error: #error "Header 'CLI/CLI.hpp' could not be found"
+    4 |           #error "Header 'CLI/CLI.hpp' could not be found"
+      |            ^~~~~
+
+Has header "CLI/CLI.hpp" : NO 
+Pkg-config binary for 1 is cached.
+Determining dependency 'CLI11' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion CLI11` -> 1
+
+CMake binary for 1 is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Default target is not allowed for cross use
+Found CMake: NO
+CMake binary for machine 1 not found. Giving up.
+Run-time dependency cli11 found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency CLI11
+
+Executing subproject CLI11 
+
+Program scripts/ExtractVersion.py found: YES (/home/hardcore/pdk/phosphor-state-manager/subprojects/CLI11/scripts/ExtractVersion.py)
+Running command: /home/hardcore/pdk/phosphor-state-manager/subprojects/CLI11/scripts/ExtractVersion.py
+--- stdout ---
+2.2.0
+
+--- stderr ---
+
+
+Project name: CLI11
+Project version: 2.2.0
+C++ compiler for the host machine: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi (gcc 12.1.0 "arm-openbmc-linux-gnueabi-g++ (GCC) 12.1.0")
+C++ linker for the host machine: arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi ld.bfd 2.38.20220623
+C++ compiler for the build machine: g++ (gcc 11.1.0 "g++ (Ubuntu 11.1.0-1ubuntu1~20.04) 11.1.0")
+C++ linker for the build machine: g++ ld.bfd 2.34
+Build targets in project: 0
+Subproject CLI11 finished.
+
+Dependency CLI11 from subproject subprojects/CLI11 found: YES 2.2.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'cereal' with pkg-config executable '/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/pkgconfig:/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/share/pkgconfig
+env[PKG_CONFIG_SYSROOT_DIR]: /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi
+Called `/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/pkg-config --modversion cereal` -> 1
+
+CMake binary for 1 is cached as not found
+CMake binary for machine 1 not found. Giving up.
+Run-time dependency cereal found: NO (tried pkgconfig and cmake)
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpfwe38xpx
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpfwe38xpx/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpfwe38xpx/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -std=c++20 
+
+Code:
+ 
+        #include <cereal/cereal.hpp>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef cereal::specialize
+                cereal::specialize;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpfwe38xpx/testfile.cpp:2:18: fatal error: cereal/cereal.hpp: No such file or directory
+    2 |         #include <cereal/cereal.hpp>
+      |                  ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Running compile:
+Working directory:  /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpadel9hk_
+Command line:  arm-openbmc-linux-gnueabi-g++ -marm -mcpu=arm1176jz-s -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpadel9hk_/testfile.cpp -o /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpadel9hk_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -std=c++20 
+
+Code:
+ 
+        #include <cereal/cereal.hpp>
+        using cereal::specialize;
+        int main(void) { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/hardcore/pdk/phosphor-state-manager/build/meson-private/tmpadel9hk_/testfile.cpp:2:18: fatal error: cereal/cereal.hpp: No such file or directory
+    2 |         #include <cereal/cereal.hpp>
+      |                  ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Header <cereal/cereal.hpp> has symbol "cereal::specialize" with dependency cereal: NO 
+
+Executing subproject cereal method cmake 
+
+CMake binary for 0 is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Trying a default CMake fallback at cmake
+Found CMake: /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/cmake (3.23.2)
+
+Configuring the build directory with CMake version 3.23.2
+Running CMake with: -G Ninja -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_TESTS=OFF
+  - build directory:          /home/hardcore/pdk/phosphor-state-manager/build/subprojects/cereal/__CMake_build
+  - source directory:         /home/hardcore/pdk/phosphor-state-manager/subprojects/cereal
+  - toolchain file:           /home/hardcore/pdk/phosphor-state-manager/build/subprojects/cereal/__CMake_build/CMakeMesonToolchainFile.cmake
+  - preload file:             /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/python3.10/site-packages/mesonbuild/cmake/data/preload.cmake
+  - trace args:               --trace-expand --trace-format=json-v1 --no-warn-unused-cli --trace-redirect=cmake_trace.txt
+  - disabled policy warnings: [CMP0025, CMP0047, CMP0056, CMP0060, CMP0065, CMP0066, CMP0067, CMP0082, CMP0089, CMP0102]
+
+Calling CMake (['/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/cmake']) in /home/hardcore/pdk/phosphor-state-manager/build/subprojects/cereal/__CMake_build with:
+  - "-G"
+  - "Ninja"
+  - "-DCMAKE_INSTALL_PREFIX=/usr/local"
+  - "-DBUILD_TESTS=OFF"
+  - "--trace-expand"
+  - "--trace-format=json-v1"
+  - "--no-warn-unused-cli"
+  - "--trace-redirect=cmake_trace.txt"
+  - "-DCMAKE_POLICY_WARNING_CMP0025=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0047=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0056=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0060=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0065=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0066=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0067=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0082=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0089=OFF"
+  - "-DCMAKE_POLICY_WARNING_CMP0102=OFF"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/hardcore/pdk/phosphor-state-manager/build/subprojects/cereal/__CMake_build/CMakeMesonToolchainFile.cmake"
+  - "-DMESON_PRELOAD_FILE=/home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/lib/python3.10/site-packages/mesonbuild/cmake/data/preload.cmake"
+  - "/home/hardcore/pdk/phosphor-state-manager/subprojects/cereal"
+Running with expanded trace output on.
+Not searching for unused variables given on the command line.
+Trace will be written to cmake_trace.txt
+-- The CXX compiler identification is GNU 12.1.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/bin/arm-openbmc-linux-gnueabi/arm-openbmc-linux-gnueabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/cmake/Boost-1.79.0/BoostConfig.cmake:141 (find_package):
+  Could not find a package configuration file provided by
+  "boost_serialization" (requested version 1.79.0) with any of the following
+  names:
+
+    boost_serializationConfig.cmake
+    boost_serialization-config.cmake
+
+  Add the installation prefix of "boost_serialization" to CMAKE_PREFIX_PATH
+  or set "boost_serialization_DIR" to a directory containing one of the above
+  files.  If "boost_serialization" provides a separate development package or
+  SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /home/hardcore/pdk/romulus-2022-08-03/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/cmake/Boost-1.79.0/BoostConfig.cmake:262 (boost_find_component)
+  /home/hardcore/pdk/romulus-2022-08-03/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/FindBoost.cmake:594 (find_package)
+  CMakeLists.txt:111 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/hardcore/pdk/phosphor-state-manager/build/subprojects/cereal/__CMake_build/CMakeFiles/CMakeOutput.log".
+
+CMake configuration: FAILED
+
+Exception: Failed to configure the CMake subproject
+
+Subproject subprojects/cereal is buildable: NO (disabling)
+
+meson.build:120:4: ERROR: Assert failed: cereal is required
