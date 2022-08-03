@@ -22,7 +22,7 @@ expected.
 
 # Step one: Add Boost files
 
-Go to the cmake directory generated during the sdk installation step.
+Go to the cmake directory generated during the sdk installation step
 and create a boost_serialization directory.
 ```
    cd ~/sdk/romulus-2022-08-02/sysroots/arm1176jzs-openbmc-linux-gnueabi/usr/lib/cmake
