@@ -103,6 +103,18 @@ else
     CLI11 = dependency('CLI11')
 endif
 
+if cpp.has_header_symbol('function2/function2.hpp', 'fu2::unique_function')
+    function2_dep = declare_dependency()
+  else
+   func2_opts = import('cmake').subproject_options()
+   func2_opts.add_cmake_defines({'BUILD_TESTS': 'OFF'})
+   func2_proj = import('cmake').subproject(
+             'function2',
+             options: func2_opts,
+             required: false)
+   function2= func2_proj.dependency('function2')
+  endif
+
 # Get Cereal dependency.
 cereal = dependency('cereal', required: false)
 has_cereal = cpp.has_header_symbol(
@@ -128,6 +140,7 @@ executable('phosphor-host-state-manager',
             'host_check.cpp',
             'utils.cpp',
             dependencies: [
+                function2,
                 cereal,
                 fmt,
                 libgpiod,
@@ -145,6 +158,7 @@ executable('phosphor-hypervisor-state-manager',
             'hypervisor_state_manager_main.cpp',
             'settings.cpp',
             dependencies: [
+                function2,
                 phosphordbusinterfaces,
                 phosphorlogging,
                 sdbusplus,
@@ -161,6 +175,7 @@ executable('phosphor-chassis-state-manager',
             dependencies: [
                 cereal,
                 fmt,
+                function2,
                 libgpiod,
                 nlohmann_json,
                 phosphordbusinterfaces,
@@ -176,6 +191,7 @@ executable('phosphor-chassis-check-power-status',
             'chassis_check_power_status.cpp',
             'utils.cpp',
             dependencies: [
+                function2,
                 libgpiod,
                 phosphordbusinterfaces,
                 phosphorlogging,
@@ -190,6 +206,7 @@ executable('phosphor-bmc-state-manager',
             'bmc_state_manager_main.cpp',
             'utils.cpp',
             dependencies: [
+                function2,
                 libgpiod,
                 phosphordbusinterfaces,
                 phosphorlogging,
@@ -205,6 +222,7 @@ executable('phosphor-discover-system-state',
             'settings.cpp',
             'utils.cpp',
             dependencies: [
+                function2,
                 cereal,
                 fmt,
                 libgpiod,
@@ -222,6 +240,7 @@ executable('phosphor-systemd-target-monitor',
             'systemd_target_signal.cpp',
             'utils.cpp',
             dependencies: [
+                function2,
                 CLI11,
                 libgpiod,
                 nlohmann_json,
@@ -238,6 +257,7 @@ executable('phosphor-scheduled-host-transition',
             'scheduled_host_transition.cpp',
             'utils.cpp',
             dependencies: [
+                function2,
                 cereal,
                 libgpiod,
                 phosphorlogging,
@@ -307,6 +327,7 @@ gmock = dependency('gmock', disabler: true, required: build_tests)
           './test/systemd_parser.cpp',
           'systemd_target_parser.cpp',
           dependencies: [
+              function2,
               gtest,
               nlohmann_json,
           ],
@@ -322,6 +343,7 @@ gmock = dependency('gmock', disabler: true, required: build_tests)
           'systemd_target_signal.cpp',
           'utils.cpp',
           dependencies: [
+              function2,
               gtest,
               libgpiod,
               nlohmann_json,
@@ -341,6 +363,7 @@ gmock = dependency('gmock', disabler: true, required: build_tests)
           'scheduled_host_transition.cpp',
           'utils.cpp',
           dependencies: [
+              function2,
               cereal,
               gmock,
               gtest,
@@ -360,6 +383,7 @@ gmock = dependency('gmock', disabler: true, required: build_tests)
           './test/hypervisor_state.cpp',
           'hypervisor_state_manager.cpp',
           dependencies: [
+              function2,
               gtest,
               phosphorlogging,
               sdbusplus,
