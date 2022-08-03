@@ -53,3 +53,12 @@ Remove the existing meson.build file and add the one from this repo.
   rm -rf meson.build
   cp build-for-phosphor-state-manager-sdk/meson.build meson.build
 ```
+# If the build is still unsuccesful
+
+It is possible that the meson build will fail due to function2 not grabbing it's googletest dependency.
+That's fine just manually throw it in there and it will build without error.
+
+```
+   cd phosphor-state-manager/subprojects/function2/test
+   git clone https://github.com/google/googletest
+```
